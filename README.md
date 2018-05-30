@@ -19,7 +19,7 @@ There are two ways to load the plugin file in Cresco:
 ```
 [plugins]
 plugin/0=0
-plugin/1=1  <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Add this line (with 1 for enabled)
+plugin/1=1  <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Add this line (with 1 for enabled)
 
 ...
 
