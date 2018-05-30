@@ -1,5 +1,5 @@
 # Cresco-HelloWorld-Plugin
-The Cresco HelloWorld Plugin performs a very basic piece of work, displays a log message, and subsequently removes itself.
+The Cresco HelloWorld Plugin performs a very basic piece of work, display a log message, and subsequently removes itself.
 
 ##### Requirements
 * Java JDK 1.8+
@@ -7,7 +7,7 @@ The Cresco HelloWorld Plugin performs a very basic piece of work, displays a log
 
 ##### Compiling the JAR file:
 All the Maven plugins and code necessary to generate a JAR file are included in the existing `pom.xml`. In order to create the plugin JAR file, simply issue the following command:
-```java
+```
 mvn clean package
 ```
 This will generate the file `cresco-helloworld-plugin-0.1.0.jar` in the `target/` directory which can then be read/loaded by the Cresco framework.
@@ -19,7 +19,7 @@ There are two ways to load the plugin file in Cresco:
 ```
 [plugins]
 plugin/0=0
-plugin/1=1                                                  > Add this line (with 1 for enabled)
+plugin/1=1  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~> Add this line (with 1 for enabled)
 
 ...
 
