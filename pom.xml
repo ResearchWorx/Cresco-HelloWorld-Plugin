@@ -11,6 +11,10 @@
 
 	<name>Cresco Hello World Plugin</name>
 	<description>Hello World demonstration plugin for the Cresco Framework</description>
+	<url>https://github.com/ResearchWorx/Cresco-HelloWorld-Plugin</url>
+	<scm>
+		<connection>scm:git:git://github.com/ResearchWorx/Cresco-HelloWorld-Plugin.git</connection>
+	</scm>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,6 +22,8 @@
 		<cresco.plugin.library.version>0.5.3</cresco.plugin.library.version>
 		<mojo.buildnumber.version>1.4</mojo.buildnumber.version>
 		<maven.assembly.version>3.1.0</maven.assembly.version>
+		<maven.buildnumber.version>1.4</maven.buildnumber.version>
+		<maven.buildnumber.length>7</maven.buildnumber.length>
 		<maven.compiler.version>3.5.1</maven.compiler.version>
 	</properties>
 
@@ -41,6 +47,24 @@
 				</configuration>
 			</plugin>
 			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>buildnumber-maven-plugin</artifactId>
+				<version>${maven.buildnumber.version}</version>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<goals>
+							<goal>create</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<doCheck>false</doCheck>
+					<doUpdate>false</doUpdate>
+					<shortRevisionLength>${maven.buildnumber.length}</shortRevisionLength>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<version>${maven.assembly.version}</version>
@@ -48,7 +72,7 @@
 					<archive>
 						<manifestEntries>
 							<artifactId>cresco-helloworld-plugin</artifactId>
-							<Implementation-Version>${project.version}.${maven.build.timestamp}</Implementation-Version>
+							<Implementation-Version>${project.version}.${buildNumber}.${maven.build.timestamp}</Implementation-Version>
 						</manifestEntries>
 					</archive>
 					<descriptorRefs>
