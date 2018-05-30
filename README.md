@@ -19,12 +19,12 @@ There are two ways to load the plugin file in Cresco:
 ```
 [plugins]
 plugin/0=0
-plugin/1=1  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~> Add this line (with 1 for enabled)
+plugin/1=1  <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Add this line (with 1 for enabled)
 
 ...
 
 [plugin/1]                                                 \
-pluginname = cresco-helloworld-plugin                       > Add this block as well
+pluginname = cresco-helloworld-plugin                       | Add this block as well
 jarfile = path/to/cresco-helloworld-plugin-0.1.0.jar       /
 ```
 1) Or by uploading the JAR file and building an application using the [Cresco-Agent-Dashboard-Plugin](https://github.com/ResearchWorx/Cresco-Agent-Dashboard-Plugin) documentation.
